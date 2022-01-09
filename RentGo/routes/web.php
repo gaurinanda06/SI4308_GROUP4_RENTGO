@@ -17,13 +17,10 @@ use Illuminate\Support\Facades\Route;
 // =============================== P U B L I C ================================
 // ============================================================================
 
-Route::get('/', 'PageController@welcome')->name('welcome');
+Route::get('/', 'PageController@welcome')->name('home');
 Route::get('/contact', 'PageController@contact')->name('contact');
-Route::get('/katalog', 'PageController@katalog')->name('katalog');
-Route::get('/toko', 'PageController@showToko')->name('showToko');
-Route::get('/toko/{slug_toko}', 'PageController@toko')->name('toko');
-Route::get('/detail-produk/{id_product}', 'PageController@detailProduk')->name('detailProduk');
-Route::get('/show/{id}', 'PageController@show')->name('show');
+Route::get('/car', 'PageController@car')->name('car');
+Route::get('/about', 'PageController@about')->name('about');
 
 // ============================================================================
 // ================================ L O G I N =================================
@@ -34,26 +31,13 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
 
 
-    // ================================ CRAFTER =================================
+    // ================================ USER =================================
 
-    // Admin Home
-    Route::get('/home', 'HomeController@index')->name('home');
 
-    // Dashboard
-    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
-    // About
-    Route::get('/about', 'Controller@about')->name('about');
-
-    // Product
-    Route::prefix('product')->name('product')->group(function () {
-        Route::get('/', 'ProductsController@index')->name('');
-        Route::get('/create', 'ProductsController@create_view')->name('.create');
-        Route::post('/create', 'ProductsController@create_process')->name('.create.process');
-        Route::get('/update/{id}', 'ProductsController@update_view')->name('.update');
-        Route::post('/update/{id}', 'ProductsController@update_process')->name('.update.process');
-        Route::get('/delete/{id}', 'ProductsController@delete')->name('.delete');
-    });
+    Route::get('/car/{id}', 'PageController@car_detail')->name('detailCar');
+    Route::post('/car/{id}', 'PageController@order')->name('user.order');
+    Route::get('/cart', 'PageController@cart')->name('cart');
+    Route::post('/upload-image/{id}', 'PageController@uploadimage')->name('upload.image');
 
     // Profile
     Route::prefix('profile')->name('profile')->group(function () {
@@ -65,7 +49,31 @@ Route::middleware('auth')->group(function () {
 
     // ================================ A D M I N =================================
 
-    Route::middleware('admin')->group(function () {
+    Route::middleware('admin')->prefix('admin')->group(function () {
+
+        // Admin Home
+        Route::get('/home', 'DashboardController@index')->name('admin.home');
+
+        // About
+        Route::get('/about', 'Controller@about')->name('admin.about');
+
+        // Order
+        Route::prefix('order')->name('order')->group(function () {
+            Route::get('/', 'OrderController@index')->name('');
+            Route::get('/update/{id}', 'OrderController@update_view')->name('.update');
+            Route::post('/update/{id}', 'OrderController@update_process')->name('.update.process');
+            Route::get('/delete/{id}', 'OrderController@delete')->name('.delete');
+        });
+
+        // Product
+        Route::prefix('product')->name('product')->group(function () {
+            Route::get('/', 'ProductsController@index')->name('');
+            Route::get('/create', 'ProductsController@create_view')->name('.create');
+            Route::post('/create', 'ProductsController@create_process')->name('.create.process');
+            Route::get('/update/{id}', 'ProductsController@update_view')->name('.update');
+            Route::post('/update/{id}', 'ProductsController@update_process')->name('.update.process');
+            Route::get('/delete/{id}', 'ProductsController@delete')->name('.delete');
+        });
 
         // Categories
         Route::prefix('category')->name('category')->group(function () {
