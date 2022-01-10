@@ -51,11 +51,6 @@
 
                             <!-- Admin Only -->
                             @if (Auth::user() && Auth::user()->role == 'admin')
-                            <p>Admin Only :</p>
-                            <ul>
-                                <li>ID Store : {{$dt->id_store}}</li>
-                                <li>Crafter : {{$dt->crafter}}</li>
-                            </ul>
                             @endif
 
                             <div class="d-flex justify-content-end">
