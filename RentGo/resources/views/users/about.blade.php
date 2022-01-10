@@ -70,8 +70,7 @@
                                 <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
                                 </div>
                                 <div class="text pt-4">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the
-                                        countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">So amazing and helpfull website, i love it.</p>
                                     <p class="name">Roger Scott</p>
                                     <span class="position">Marketing Manager</span>
                                 </div>
@@ -82,8 +81,7 @@
                                 <div class="user-img mb-2" style="background-image: url(images/person_2.jpg)">
                                 </div>
                                 <div class="text pt-4">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the
-                                        countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">So amazing and helpfull website, i love it.</p>
                                     <p class="name">Roger Scott</p>
                                     <span class="position">Interface Designer</span>
                                 </div>
@@ -94,8 +92,7 @@
                                 <div class="user-img mb-2" style="background-image: url(images/person_3.jpg)">
                                 </div>
                                 <div class="text pt-4">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the
-                                        countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">So amazing and helpfull website, i love it.</p>
                                     <p class="name">Roger Scott</p>
                                     <span class="position">UI Designer</span>
                                 </div>
@@ -106,8 +103,7 @@
                                 <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
                                 </div>
                                 <div class="text pt-4">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the
-                                        countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">So amazing and helpfull website, i love it.</p>
                                     <p class="name">Roger Scott</p>
                                     <span class="position">Web Developer</span>
                                 </div>
@@ -118,8 +114,7 @@
                                 <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
                                 </div>
                                 <div class="text pt-4">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the
-                                        countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">So amazing and helpfull website, i love it.</p>
                                     <p class="name">Roger Scott</p>
                                     <span class="position">System Analyst</span>
                                 </div>
